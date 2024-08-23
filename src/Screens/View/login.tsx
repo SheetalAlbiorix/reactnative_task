@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { styles } from '../Style/login';
 import { loginModel } from '../ViewModel/login';
@@ -13,9 +13,11 @@ export default function Login() {
   }, [model.first])
   
   return (
-    <View>
-      <Text style={styles.container}>login</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <TextInput style={{}}></TextInput>
+      </View>
+    </SafeAreaView>
   )
 }
 

@@ -24,7 +24,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import LiveStreming from './src/Components/LiveStreaming/liveStreming';
+import Login from './src/Screens/View/login';
+
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -40,7 +41,7 @@ function App(): React.JSX.Element {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <LiveStreming></LiveStreming>
+      <Login></Login>
     </SafeAreaView>
   );
 }
