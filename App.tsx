@@ -24,13 +24,16 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Login from './src/Screens/View/login';
+import OnBording from './src/Screens/View/OnBording';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
+const Stack = createStackNavigator();
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -39,10 +42,8 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <Login></Login>
-    </SafeAreaView>
+  return (    
+    <OnBording></OnBording>
   );
 }
 
