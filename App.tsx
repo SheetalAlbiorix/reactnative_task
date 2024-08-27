@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -24,25 +23,17 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Login from './src/Screens/View/login';
+import MainStack from './src/Navigation/MainStack';
 
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
 
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const isDarkMode = useColorScheme() === 'light';
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <Login></Login>
-    </SafeAreaView>
+      <MainStack>
+        
+        </MainStack>
   );
 }
 

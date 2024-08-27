@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "509861100744",
+    "project_id": "eatbuddy-a0688",
+    "storage_bucket": "eatbuddy-a0688.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509861100744:android:e92f3d43a971d6b6d679fd",
+        "android_client_info": {
+          "package_name": "com.awesomeprojecttwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509861100744-fc929h77omes3cu8h0aagpd6e8o95igs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.awesomeprojecttwo",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "509861100744-rmoijalu244sdobdgj6viplltcropf9o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.awesomeprojecttwo",
+            "certificate_hash": "858dc897af3621ef692371cd4ebc1015c642cb34"
+          }
+        },
+        {
+          "client_id": "509861100744-16u8cpjak6n6hv5lhh80qv09mm9vl2r2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABL0eMKVNeN7Zso9RsgAZcGhZV-jNdH2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509861100744-16u8cpjak6n6hv5lhh80qv09mm9vl2r2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
