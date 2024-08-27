@@ -1,43 +1,40 @@
 import { Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { styles } from '../Style/OnBording';
-import { loginModel } from '../ViewModel/OnBording';
 import { Images } from '../../Utils/Images';
-import Onboarding from 'react-native-onboarding-swiper';
 import Swiper from 'react-native-swiper';
 
 
 export default function OnBording() {
+  const [onIndexChange, setOnIndexChange] = useState();
 
-  const model = loginModel()
-
-  useEffect(() => {
-    model.abc()
-    model.abdbsbs("sjdvasjv")
-  }, [model.first])
+  const onSwipeChange = (index: any) => {
+    setOnIndexChange(index);
+  }
 
   return (
-    <View>
-    <Swiper
-      loop={false}
-      showsPagination={true}
-      paginationStyle={styles.pagination}
-      activeDotStyle={styles.activeDot}
-      autoplay
-    >
-      <View style={styles.slide}>
-        <Image source={Images.onBoarding1} style={styles.image} />
-      </View>
-      <View style={styles.slide}>
-        <Image source={Images.onBoarding2} style={styles.image} />
-      </View>
-      <View style={styles.slide}>
-        <Image source={Images.onBoarding3} style={styles.image} />
-        <View>
-          <Text>Next</Text>
+    <View style={{ flex: 1 }}>
+      <Swiper
+        loop={false}
+        showsPagination={true}
+        paginationStyle={styles.pagination}
+        activeDotStyle={styles.activeDot}
+        autoplay
+        onIndexChanged={(index) => { onSwipeChange(index) }}
+      >
+        <View style={styles.slide}>
+          <Image source={Images.onBoarding1} style={styles.image} />
         </View>
-      </View>
-    </Swiper>
+        <View style={styles.slide}>
+          <Image source={Images.onBoarding2} style={styles.image} />
+        </View>
+        <View style={styles.slide}>
+          <Image source={Images.onBoarding3} style={styles.image} />
+        </View>
+      </Swiper>
+      {onIndexChange === 2 ? <TouchableOpacity onPress={() => { }} style={styles.nextBtnCon}>
+        <Text style={styles.netxtButton}>Next</Text>
+      </TouchableOpacity> : <></>}
     </View>
   )
 }

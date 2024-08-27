@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { FONTSIZE } from "../../Utils/FontSize";
+// import { FONTSIZE } from "../../Utils/FontSize";
 
 
 export const styles = StyleSheet.create({
@@ -33,5 +33,17 @@ export const styles = StyleSheet.create({
   activeDot: {
     backgroundColor: '#007bff',
   },
-
+  nextBtnCon : {
+    position:'absolute',
+    bottom:20,
+    right:20,
+    backgroundColor:'#13274F',
+    paddingHorizontal:25,
+    paddingVertical:12,
+    borderRadius:20
+  },
+  netxtButton:{
+    color:'#FFFFFF',
+    fontSize: 16
+  }
 })
