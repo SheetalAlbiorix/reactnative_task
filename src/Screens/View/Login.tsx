@@ -6,6 +6,7 @@ import { View, StyleSheet, Text, Image, Pressable, Dimensions, TouchableOpacity,
 import { _signInWithGoogle } from '../../config';
 import Routes from '../../Navigation/Routes';
 import { styles } from '../Style/Login';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 const { width } = Dimensions.get('window');
 
@@ -16,13 +17,32 @@ const Login = () => {
     const [passwordError, setPasswordError] = useState('');
     const navigation = useNavigation();
 
+    useEffect(
+        () =>
+            GoogleSignin.configure({
+                webClientId: '284488662131-tenejqlcidhcnll0h8kp92lo7k3el0i2.apps.googleusercontent.com',
+                iosClientId:
+                    "284488662131-i03goqep4lcr0cnikah5rro2tih9cqkt.apps.googleusercontent.com",
+                scopes: ["profile", "email"],
+                offlineAccess: false,
+            }),
+        []
+    );
 
-    async function signInWithGoogle() {
-        _signInWithGoogle().then(scopes => {
-            console.log('user data=>', scopes);
-            navigation.navigate(Routes.Welcome);
-        });
-    }
+    const continueGoogle = async () => {
+        try {
+            await GoogleSignin.hasPlayServices();
+            const userDetails = await GoogleSignin.signIn();
+            const { idToken } = await GoogleSignin.getTokens();
+
+            if (userDetails && idToken) {
+                console.log("id token:", idToken, userDetails);
+                navigation.navigate(Routes.Welcome);
+            }
+        } catch (error) {
+            console.log("some other error happened", error);
+        }
+    };
 
     const handleNextPress = () => {
         if (validateEmail() && validatePassword()) {
@@ -98,7 +118,7 @@ const Login = () => {
                 </View>
                 <View style={styles.line2} />
             </View>
-            <Pressable style={styles.touch} onPress={() => signInWithGoogle()}>
+            <Pressable style={styles.touch} onPress={() => continueGoogle()}>
                 <Image
                     source={require('../../assets/images/logo/google1.png')}
                     style={styles.image}

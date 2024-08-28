@@ -43,15 +43,15 @@ const Home = () => {
       `Logout`, `Are you sure you wants to logout?`,
       [
         {
+          text: `Cancel`,
+        },
+        {
           text: `Logout`,
           onPress: async () => {
             await AsyncStorage.setItem('isLoggeIn', "false");
             navigation.navigate(Routes.Login);
           },
-        },
-        {
-          text: `Cancel`,
-        },
+        }
       ],)
   };
 

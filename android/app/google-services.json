@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "284488662131",
+    "project_id": "react-native-task-2c2f4",
+    "storage_bucket": "react-native-task-2c2f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284488662131:android:ea1dc016bd69ca457b7e06",
+        "android_client_info": {
+          "package_name": "com.awesomeprojecttwo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284488662131-tenejqlcidhcnll0h8kp92lo7k3el0i2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVD9Ez4eY1jgbYeMmijXsaj0HuzkxxVLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "284488662131-tenejqlcidhcnll0h8kp92lo7k3el0i2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "284488662131-i03goqep4lcr0cnikah5rro2tih9cqkt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.awesomeprojecttwo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

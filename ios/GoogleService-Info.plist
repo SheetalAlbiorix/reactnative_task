@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>117173807-gcv5n5k4i8e9ljlsp8q7or1poujpu88u.apps.googleusercontent.com</string>
+	<string>284488662131-i03goqep4lcr0cnikah5rro2tih9cqkt.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.117173807-gcv5n5k4i8e9ljlsp8q7or1poujpu88u</string>
+	<string>com.googleusercontent.apps.284488662131-i03goqep4lcr0cnikah5rro2tih9cqkt</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB2T3nYQkP664D84nB_D3TNVBZA1yz3MCw</string>
+	<string>AIzaSyA83AztSfItIr9keZ1hsDMSZ34WoppgyFI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>117173807</string>
+	<string>284488662131</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.anant.uber-eats2</string>
+	<string>com.awesomeprojecttwo</string>
 	<key>PROJECT_ID</key>
-	<string>ubereats-64d10</string>
+	<string>react-native-task-2c2f4</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ubereats-64d10.appspot.com</string>
+	<string>react-native-task-2c2f4.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:117173807:ios:b842b42bd034f54bfa20da</string>
+	<string>1:284488662131:ios:eba89ade78b74a4d7b7e06</string>
 </dict>
 </plist>

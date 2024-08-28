@@ -4,4 +4,4 @@ export default {
     OnBording: "OnBording",
     Login: "Login",
     Welcome: "Welcome",
-}
+};

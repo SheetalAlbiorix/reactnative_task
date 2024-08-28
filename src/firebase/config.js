@@ -4,13 +4,13 @@ import '@firebase/auth';
 import '@firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyAqy3pH2I6IA5a64VjQmCTQT19klxOPttw',
-    authDomain: 'ubereats-f75ce.firebaseapp.com',
-    databaseURL: 'https://console.firebase.google.com/project/ubereats-f75ce/firestore/databases/-default-/data/~2F',
-    projectId: 'ubereats-f75ce',
-    storageBucket: 'ubereats-f75ce.appspot.com',
-    messagingSenderId: '12345-insert-yourse',
-    appId: 'insert yours: 1:1234:web:ee873bd1234c0deb7eba61ce',
+    apiKey: "AIzaSyB9A94m8eSuaIRAYaXFueM1sBQkhhQLVig",
+    authDomain: "react-native-task-2c2f4.firebaseapp.com",
+    projectId: "react-native-task-2c2f4",
+    storageBucket: "react-native-task-2c2f4.appspot.com",
+    messagingSenderId: "284488662131",
+    appId: "1:284488662131:web:574e5bae4b5dc2a97b7e06",
+    measurementId: "G-JMG4GKP339"
 };
 
 if (!firebase.apps.length) {
