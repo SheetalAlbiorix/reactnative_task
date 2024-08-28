@@ -9,7 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const { width, height } = Dimensions.get('window');
 
 const countries = [
-    { image: require('../../../assets/images/flags/GB.png'), code: 'GB', name: 'United Kingdom', dialCode: '+44' },
+    { image: require('../../../src/assets/images/flags/GB.png'), code: 'GB', name: 'United Kingdom', dialCode: '+44' },
     
 ];
 
@@ -24,13 +24,13 @@ const Login = () => {
     async function signInWithGoogle() {
         _signInWithGoogle().then(scopes => {
             console.log('user data=>', scopes);
-            navigation.navigate('WelcomeScreen');
+            navigation.navigate('Welcome');
         });
     }
 
     const handleNextPress = () => {
         if (validateEmail() && validatePassword()) {
-            navigation.navigate('WelcomeScreen');
+            navigation.navigate('Welcome');
         }
     };
 
@@ -96,7 +96,7 @@ const Login = () => {
             </View>
             <Pressable style={styles.touch} onPress={() => signInWithGoogle()}>
                 <Image
-                    source={require('../../../assets/images/logo/google1.png')}
+                    source={require('../../../src/assets/images/logo/google1.png')}
                     style={styles.image}
                     resizeMode="contain"
                 />

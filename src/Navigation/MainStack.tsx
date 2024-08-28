@@ -8,7 +8,6 @@ import OnBording from '../Screens/View/OnBording';
 import Login from '../Screens/View/Login';
 import Welcome from '../Screens/View/Welcome';
 import Home from '../Screens/View/Home';
-// import OnBording from '../Screens/View/OnBording';
 
 const Stack = createStackNavigator();
 

@@ -12,6 +12,8 @@ const Welcome = () => {
 
     useEffect(() => {
         const ListItem = async () => {
+            const dataItem = (AsyncStorage.getItem('ListView'))
+            console.log('ListView',JSON.stringify(dataItem))
             if (AsyncStorage.getItem('ListView') == null) {
                 await AsyncStorage.setItem('ListView', JSON.stringify(Items));
             }
@@ -20,12 +22,12 @@ const Welcome = () => {
     }, []);
 
     const handleNextPress = () => {
-        navigation.navigate('HomeScreen');
+        navigation.navigate('Home');
     };
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Image source={require('../../../assets/images/done/Group42.png')} style={styles.image} />
+                <Image source={require('../../../src/assets/images/done/Group42.png')} style={styles.image} />
                 <Text style={styles.text}>All Set</Text>
             </View>
             <View>

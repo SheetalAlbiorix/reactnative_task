@@ -13,13 +13,6 @@ export default function OnBording() {
     setOnIndexChange(index);
   }
 
-  // const model = loginModel()
-
-  // useEffect(() => {
-  //   model.abc()
-  //   model.abdbsbs("sjdvasjv")
-  // }, [model.first])
-
   return (
     <View style={{flex: 1}}>
     <Swiper

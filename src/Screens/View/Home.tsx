@@ -1,4 +1,4 @@
-import { View, Text, Switch, FlatList, Image, TouchableOpacity, Modal, TextInput, Button } from 'react-native'
+import { View, Text, Switch, FlatList, Image, TouchableOpacity, Modal, TextInput, Button, ToastAndroid } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { styles } from '../Style/Home';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -38,20 +38,25 @@ const Home = () => {
   };
 
   const handleSubmit = async () => {
-    let newItem = {
+    if (inputValue != '') {
+      let newItem = {
         id: data.lenght + 1,
         image:
-            'https://imgs.search.brave.com/BrsUyDM5KPm6UGsBgtQklucDSYZw61rY3ju3X6CjA20/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMx/MjI4MzU1Ny9waG90/by9jbGFzc2ljLXRo/YWktZm9vZC1kaXNo/ZXMuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTlZME5CeWxu/ak5pTmw2RWtLNlhh/YkVUemozdEhuSE9R/V3dWay02aVVFX0k9',
+          'https://imgs.search.brave.com/BrsUyDM5KPm6UGsBgtQklucDSYZw61rY3ju3X6CjA20/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMx/MjI4MzU1Ny9waG90/by9jbGFzc2ljLXRo/YWktZm9vZC1kaXNo/ZXMuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTlZME5CeWxu/ak5pTmw2RWtLNlhh/YkVUemozdEhuSE9R/V3dWay02aVVFX0k9',
         name: inputValue,
         isEnabled: false
+      }
+      let tempData = [
+        ...data
+      ]
+      setData([...tempData, newItem]);
+      await AsyncStorage.setItem('ListView', JSON.stringify(tempData));
+      console.log('data item', data.length)
+      setIsPopupVisible(false)
     }
-    let tempData = [
-      ...data
-    ]
-    setData([...tempData,newItem]);
-    await AsyncStorage.setItem('ListView', JSON.stringify(tempData));
-    console.log('data item',data.length)
-    setIsPopupVisible(false)
+else{
+  ToastAndroid.show('Enter Value', ToastAndroid.LONG)
+}
   };
 
 

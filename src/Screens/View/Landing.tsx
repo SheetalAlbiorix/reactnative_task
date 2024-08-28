@@ -3,7 +3,7 @@ import { View, StyleSheet, Image, Text, TextInput, TouchableOpacity, FlatList, T
 import { useNavigation } from '@react-navigation/native';
 
 const countries = [
-    { image: require('../../../assets/images/flags/GB.png'), code: 'GB', name: 'United Kingdom', dialCode: '+44' },
+    { image: require('../../../src/assets/images/flags/GB.png'), code: 'GB', name: 'United Kingdom', dialCode: '+44' },
 
 ];
 
@@ -56,7 +56,7 @@ const Landing = () => {
     return (
         <View style={styles.container}>
             <Image
-                source={require('../../../assets/images/food/food.png')}
+                source={require('../../../src/assets/images/food/food.png')}
                 style={styles.image}
                 resizeMode="cover"
             />
